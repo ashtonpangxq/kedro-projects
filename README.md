@@ -38,3 +38,9 @@ kedro info
 You should see an ASCII art graphic and the Kedro version number. For example:
 <br><br>
 <img src='images/kedro_graphic.png' width='30%'>
+
+## Creating a new Project with Kedro
+
+```shell
+kedro new
+```
