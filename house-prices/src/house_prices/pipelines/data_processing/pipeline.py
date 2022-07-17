@@ -22,5 +22,8 @@ def create_pipeline(**kwargs) -> Pipeline:
                 outputs="preprocessed_test",
                 name="preprocess_test_node",
             ),
-        ]
+        ],
+        namespace="ingestion",
+        inputs=["train", "test"],
+        outputs=["preprocessed_train", "preprocessed_test"],
     )

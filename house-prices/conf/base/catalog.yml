@@ -6,15 +6,55 @@
 train:
   type: pandas.CSVDataSet
   filepath: data/01_raw/train.csv
+  layer: raw
 
 test:
   type: pandas.CSVDataSet
   filepath: data/01_raw/test.csv
+  layer: raw
 
 preprocessed_train:
   type: pandas.ParquetDataSet
   filepath: data/02_intermediate/preprocessed_train.pq
+  layer: intermediate
 
 preprocessed_test:
   type: pandas.ParquetDataSet
   filepath: data/02_intermediate/preprocessed_test.pq
+  layer: intermediate
+
+train_evaluation.linear_regression.regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/linear_regression.pkl
+  versioned: True
+  layer: models
+
+train_evaluation.random_forest.regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/random_forest.pkl
+  versioned: True
+  layer: models
+
+train_evaluation.r2_score_linear_regression:
+  type: tracking.MetricsDataSet
+  filepath: data/09_tracking/linear_score.json
+  versioned: True
+  layer: tracking
+
+train_evaluation.r2_score_random_forest:
+  type: tracking.MetricsDataSet
+  filepath: data/09_tracking/rf_score.json
+  versioned: True
+  layer: tracking
+
+train_evaluation.hyperparams_linear_regression:
+  type: tracking.JSONDataSet
+  filepath: data/09_tracking/linear_params.json
+  versioned: True
+  layer: tracking
+
+train_evaluation.hyperparams_random_forest:
+  type: tracking.JSONDataSet
+  filepath: data/09_tracking/rf_params.json
+  versioned: True
+  layer: tracking
