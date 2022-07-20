@@ -1,4 +1,4 @@
-# house-prices
+# Predicting House Prices
 
 ## Overview
 Predicting House Prices with [Kaggle Dataset](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) using Machine Learning Models. 
@@ -121,3 +121,11 @@ To automatically strip out all output cell contents before committing to `git`, 
 ## Package your Kedro project
 
 [Further information about building project documentation and packaging your project](https://kedro.readthedocs.io/en/stable/tutorial/package_a_project.html)
+
+## Creating Documentation with Kedro
+
+```shell
+kedro build-docs
+```
+
+Documentation is located under docs/build/html
