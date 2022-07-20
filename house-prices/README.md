@@ -1,10 +1,11 @@
 # house-prices
 
 ## Overview
+Predicting House Prices with [Kaggle Dataset](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) using Machine Learning Models. 
 
-This is your new Kedro project, which was generated using `Kedro 0.18.2`.
-
-Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
+Current Models used:
+* Linear Regression
+* Random Forest
 
 ## Rules and guidelines
 
