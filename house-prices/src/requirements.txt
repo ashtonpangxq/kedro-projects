@@ -12,6 +12,7 @@ pytest-mock>=1.7.1, <2.0
 pytest~=6.2
 kedro[pandas.CSVDataSet, pandas.ExcelDataSet, pandas.ParquetDataSet]==0.18.2   # Specify optional Kedro dependencies
 kedro-viz~=4.0                                                                 # Visualise your pipelines
+kedro-mlflow==0.11.1                                                           # For Experiment Tracking
 scikit-learn~=1.0                                                              # For modelling in the data science pipeline
 matplotlib~=3.5.1
 plotly>=4.0
