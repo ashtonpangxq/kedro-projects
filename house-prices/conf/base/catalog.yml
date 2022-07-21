@@ -53,6 +53,12 @@ train_evaluation.metrics_ridge:
   versioned: True
   layer: tracking
 
+train_evaluation.metrics_lasso:
+  type: tracking.MetricsDataSet
+  filepath: data/09_tracking/lasso_score.json
+  versioned: True
+  layer: tracking
+
 train_evaluation.hyperparams_linear_regression:
   type: tracking.JSONDataSet
   filepath: data/09_tracking/linear_params.json
@@ -68,5 +74,11 @@ train_evaluation.hyperparams_random_forest:
 train_evaluation.hyperparams_ridge:
   type: tracking.JSONDataSet
   filepath: data/09_tracking/ridge_params.json
+  versioned: True
+  layer: tracking
+
+train_evaluation.hyperparams_lasso:
+  type: tracking.JSONDataSet
+  filepath: data/09_tracking/lasso_params.json
   versioned: True
   layer: tracking

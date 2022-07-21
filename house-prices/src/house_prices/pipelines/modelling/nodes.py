@@ -72,8 +72,7 @@ def evaluate_model(
 
     # Predictions
     X_test = SCALER.transform(X_test)
-    y_pred = regressor.predict(X_test)\
-    
+    y_pred = regressor.predict(X_test)
     # Model Evaluation
     score = r2_score(y_test, y_pred)
     mse = mean_squared_error(y_test, y_pred)

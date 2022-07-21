@@ -43,3 +43,12 @@ train_evaluation:
         normalize: False
         solver: 'auto'
         random_state: 42
+    lasso:
+      module: sklearn.linear_model
+      class: Lasso
+      kwargs:
+        alpha: 1.0
+        fit_intercept: True
+        normalize: False
+        selection: 'cyclic'
+        random_state: 42
