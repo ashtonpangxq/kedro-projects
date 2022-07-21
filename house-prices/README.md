@@ -104,3 +104,11 @@ kedro build-docs
 ```
 
 Documentation is located under docs/build/html
+
+### MLFlow Tracking
+
+After you have run several experiments, you can access MLFlow experimental tracking features under:
+
+```shell
+kedro mlflow ui
+```
