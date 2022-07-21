@@ -10,7 +10,7 @@ import numpy as np
 from sklearn.base import BaseEstimator
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error, max_error
 from sklearn import metrics
 
 SCALER = StandardScaler()
@@ -72,7 +72,12 @@ def evaluate_model(
 
     # Predictions
     X_test = SCALER.transform(X_test)
-    y_pred = regressor.predict(X_test)
+    y_pred = regressor.predict(X_test)\
+    
+    # Model Evaluation
     score = r2_score(y_test, y_pred)
+    mse = mean_squared_error(y_test, y_pred)
+    mae = mean_absolute_error(y_test, y_pred)
+    me = max_error(y_test, y_pred)
 
-    return {"r2_score": score}
+    return {"r2_score": score, "mse": mse, "mae": mae, "max_error": me}

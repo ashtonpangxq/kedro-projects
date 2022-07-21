@@ -27,7 +27,7 @@ def new_train_eval_template() -> Pipeline:
             node(
                 func=evaluate_model,
                 inputs=["regressor", "X_test", "y_test"],
-                outputs="r2_score",
+                outputs="metrics",
             ),
         ]
     )
@@ -56,7 +56,7 @@ def create_pipeline(model_types: List[str]) -> Pipeline:
             inputs={k: k for k in test_train_refs},
             outputs={  # both of these are tracked as experiments
                 "experiment_params": f"hyperparams_{model_type}",
-                "r2_score": f"r2_score_{model_type}",
+                "metrics": f"metrics_{model_type}",
             },
             namespace=model_type,
         )
