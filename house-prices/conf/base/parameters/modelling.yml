@@ -34,3 +34,12 @@ train_evaluation:
         verbose: 0
         warm_start: False
         ccp_alpha: 0
+    ridge:
+      module: sklearn.linear_model
+      class: Ridge
+      kwargs:
+        alpha: 1.0
+        fit_intercept: True
+        normalize: False
+        solver: 'auto'
+        random_state: 42

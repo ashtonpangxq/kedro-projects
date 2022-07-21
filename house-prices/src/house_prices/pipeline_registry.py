@@ -14,7 +14,7 @@ def register_pipelines() -> Dict[str, Pipeline]:
     """
     data_processing_pipeline = data_processing.create_pipeline()
     modelling_pipeline = mod.create_pipeline(
-        model_types=["linear_regression", "random_forest"]
+        model_types=["linear_regression", "random_forest", "ridge"]
     )
 
     return {
